@@ -21,7 +21,7 @@ export function HeroSection() {
       {/* Top-right maker logo */}
       <div className="absolute right-3 top-3 sm:right-6 sm:top-6 z-40 pointer-events-none rotate-6">
         {/* Size container for responsiveness */}
-        <div className="relative w-20 sm:w-28 md:w-40 aspect-square">
+        <div className="relative w-20 sm:w-28 md:w-40 aspect-square overflow-hidden rounded-full">
           {/* Red halo to separate from black background */}
           <div className="absolute -inset-4 sm:-inset-5 rounded-full blur-2xl opacity-90" style={{ background: 'radial-gradient(45% 45% at 50% 50%, rgba(255, 25, 0, 0.9) 0%, rgba(255, 25, 0, 0.45) 45%, rgba(255, 25, 0, 0.0) 75%)' }} />
           {/* White core glow to lift dark pixels */}
@@ -36,8 +36,12 @@ export function HeroSection() {
             fill
             sizes="(min-width: 768px) 10rem, (min-width: 640px) 7rem, 5rem"
             className="relative object-contain drop-shadow-[0_0_0_rgba(0,0,0,0)] saturate-[1.8] contrast-[1.4] brightness-125"
-            style={{ filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.9)) drop-shadow(0 0 14px rgba(255,0,0,0.9)) drop-shadow(0 0 28px rgba(255,0,0,0.65))' }}
-            priority
+            style={{
+              filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.9)) drop-shadow(0 0 14px rgba(255,0,0,0.9)) drop-shadow(0 0 28px rgba(255,0,0,0.65))',
+              WebkitMaskImage: 'radial-gradient(closest-side, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)',
+              maskImage: 'radial-gradient(closest-side, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)'
+            }}
+            loading="lazy"
           />
         </div>
       </div>

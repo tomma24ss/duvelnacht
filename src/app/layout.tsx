@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Cinzel } from "next/font/google";
 import "./globals.css";
+import { getSiteData } from "@/lib/data";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -70,11 +71,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteData = getSiteData();
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preload hero background image so it renders first */}
+        <link rel="preload" as="image" href={siteData.heroPoster} fetchPriority="high" />
       </head>
       <body
         className={`${inter.variable} ${cinzel.variable} bg-grain min-h-screen antialiased`}
