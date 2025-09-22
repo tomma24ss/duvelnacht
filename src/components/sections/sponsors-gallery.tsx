@@ -1,4 +1,5 @@
 import { getSponsorImages } from '@/lib/gallery';
+import Image from 'next/image';
 
 export function SponsorsGallery() {
   const items = getSponsorImages();
@@ -14,13 +15,15 @@ export function SponsorsGallery() {
         <div className="columns-2 md:columns-4 [column-gap:0] [column-fill:_balance]">
           {items.map((item) => (
             <div key={item.id} className="break-inside-avoid mb-0 p-4 flex items-center justify-center bg-white/5">
-              <img
-                src={encodeURI(item.src)}
-                alt={item.alt}
-                className="w-full h-auto object-contain align-top block max-h-40"
-                loading="lazy"
-                decoding="async"
-              />
+              <div className="relative w-full h-40">
+                <Image
+                  src={encodeURI(item.src)}
+                  alt={item.alt}
+                  fill
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                  className="object-contain"
+                />
+              </div>
             </div>
           ))}
         </div>

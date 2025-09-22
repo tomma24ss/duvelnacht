@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   publisher: "Duvelnacht",
   metadataBase: new URL("https://duvelnacht.com"),
   icons: {
-    icon: "/media/gallery/profiel.jpg",
+    icon: "/favicon.ico",
   },
   openGraph: {
     title: "DUVELNACHT",
@@ -75,9 +75,6 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="icon" href="/media/gallery/profiel.jpg" type="image/jpeg" sizes="32x32" />
-        <link rel="icon" href="/media/gallery/profiel.jpg" type="image/jpeg" sizes="192x192" />
-        <link rel="apple-touch-icon" href="/media/gallery/profiel.jpg" />
       </head>
       <body
         className={`${inter.variable} ${cinzel.variable} bg-grain min-h-screen antialiased`}
