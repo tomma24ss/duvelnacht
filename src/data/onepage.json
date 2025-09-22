@@ -1,0 +1,26 @@
+{
+  "site": {
+    "name": "DUVELNACHT",
+    "date": "Zaterdag 11 oktober 2025",
+    "time": "21:00 - 04:00",
+    "venue": "Den Amb8",
+    "city": "Oosterzele",
+    "address": "Lange Ambachtstraat 42, 9860 Oosterzele",
+    "contactEmail": "info@duvelnacht.com",
+    "ticketURL": "https://duvelnacht-chiro-balegem.weticket.io/duvelnacht/shop",
+    "heroVideo": "",
+    "heroPoster": "/media/gallery/duvelnachtfoto.jpg",
+    "contacts": {
+      "general": "info@duvelnacht.com",
+      "press": "press@duvelnacht.com",
+      "booking": "booking@duvelnacht.com"
+    }
+  },
+  "features": [],
+  "videos": [],
+  "legal": {
+    "terms": "# Terms of Service\\n\\nBy purchasing a ticket to Duvelnacht, you agree to abide by our terms and conditions. All attendees must be 18 or older with valid photo ID. Tickets are non-refundable and non-transferable except in cases of official event cancellation.\\n\\n## Prohibited Items\\n- Professional recording equipment\\n- Outside food and beverages\\n- Glass containers\\n- Illegal substances\\n\\n## Liability\\nAttendees participate at their own risk. Event organizers are not responsible for lost, stolen, or damaged personal property.",
+    "privacy": "# Privacy Policy\\n\\nWe collect minimal personal information necessary for ticket sales and event communication. Your email address will only be used for event updates and our monthly newsletter (opt-in only).\\n\\n## Data Collection\\n- Name and email for ticket purchases\\n- Payment information (processed securely through our payment partner)\\n- Optional newsletter subscription\\n\\n## Data Protection\\nWe do not sell, share, or distribute your personal information to third parties except as required for payment processing and event logistics.",
+    "cookies": "# Cookie Policy\\n\\nWe use essential cookies for website functionality and optional analytics cookies to improve user experience.\\n\\n## Essential Cookies\\n- Session management\\n- Security features\\n- Shopping cart functionality\\n\\n## Analytics Cookies (Optional)\\n- Google Analytics for visitor insights\\n- Performance monitoring\\n\\nYou can manage your cookie preferences at any time through our cookie settings."
+  }
+}

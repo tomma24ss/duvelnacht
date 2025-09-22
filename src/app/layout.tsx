@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Cinzel } from "next/font/google";
-import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 const inter = Inter({
@@ -78,12 +77,6 @@ export default function RootLayout({
         className={`${inter.variable} ${cinzel.variable} bg-grain min-h-screen antialiased`}
       >
         {children}
-        <Toaster 
-          theme="dark"
-          position="bottom-right"
-          richColors
-          closeButton
-        />
       </body>
     </html>
   );
