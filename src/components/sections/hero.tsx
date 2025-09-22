@@ -33,7 +33,7 @@ export function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-display font-extrabold text-center text-6xl md:text-8xl lg:text-9xl tracking-widest text-off-white animate-pulse-glow"
+          className="font-display font-extrabold text-center text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-wide md:tracking-widest leading-tight text-off-white animate-pulse-glow max-w-[92vw] break-words"
           style={{
             textShadow: '0 0 30px rgba(200, 67, 42, 0.8), 0 0 60px rgba(200, 67, 42, 0.6), 0 0 90px rgba(200, 67, 42, 0.4), 0 0 120px rgba(200, 67, 42, 0.2)'
           }}
@@ -62,27 +62,29 @@ export function HeroSection() {
           </p>
         </motion.div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Indicator moved out to bottom of hero section */}
+      </div>
+
+      {/* Scroll Indicator (pinned to bottom of hero) */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 2 }}
+        className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 z-30"
+      >
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2 }}
-          className="absolute -bottom-1 md:-bottom-1 left-1/2 transform -translate-x-1/2 z-30"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
         >
           <motion.div
-            animate={{ y: [0, 10, 0] }}
+            animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1 h-3 bg-white/50 rounded-full mt-2"
-            />
-          </motion.div>
-          <p className="text-xs text-white/40 mt-2 tracking-wider">SCROLL</p>
+            className="w-1 h-3 bg-white/50 rounded-full mt-2"
+          />
         </motion.div>
-      </div>
+        <p className="text-xs text-white/40 mt-2 tracking-wider">SCROLL</p>
+      </motion.div>
 
       {/* Floating Particles */}
       <div className="absolute inset-0 z-5 pointer-events-none">

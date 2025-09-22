@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { getSponsorImages } from '@/lib/gallery';
 
 export function SponsorsGallery() {
@@ -15,12 +14,12 @@ export function SponsorsGallery() {
         <div className="columns-2 md:columns-4 [column-gap:0] [column-fill:_balance]">
           {items.map((item) => (
             <div key={item.id} className="break-inside-avoid mb-0 p-4 flex items-center justify-center bg-white/5">
-              <Image
-                src={item.src}
+              <img
+                src={encodeURI(item.src)}
                 alt={item.alt}
-                width={800}
-                height={400}
                 className="w-full h-auto object-contain align-top block max-h-40"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           ))}
