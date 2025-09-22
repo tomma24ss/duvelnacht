@@ -19,7 +19,7 @@ export function HeroSection() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Top-right maker logo */}
-      <div className="absolute right-3 top-3 sm:right-6 sm:top-6 z-40 pointer-events-none rotate-6">
+      <div className="hidden sm:block absolute right-3 top-3 sm:right-6 sm:top-6 z-40 pointer-events-none rotate-6">
         {/* Size container for responsiveness */}
         <div className="relative w-20 sm:w-28 md:w-40 aspect-square">
           {/* Red halo to separate from black background */}
