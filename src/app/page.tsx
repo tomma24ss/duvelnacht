@@ -1,6 +1,7 @@
 import { HeroSection } from '@/components/sections/hero';
 import { MinimalTickets } from '@/components/sections/tickets';
 import { MiniGallery } from '@/components/sections/mini-gallery';
+import { SponsorsGallery } from '@/components/sections/sponsors-gallery';
 import { Footer } from '@/components/sections/footer';
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <MinimalTickets />
       <MiniGallery />
+      <SponsorsGallery />
       <Footer />
     </main>
   );

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { getGallery } from '@/lib/data';
+import { getGallery } from '@/lib/gallery';
 
 export function MiniGallery() {
   const shuffled = [...getGallery()].sort(() => Math.random() - 0.5);

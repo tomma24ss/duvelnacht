@@ -1,6 +1,5 @@
 import onepageData from '@/data/onepage.json';
-import fs from 'fs';
-import path from 'path';
+// Move server-only fs logic to lib/gallery.ts to avoid bundling 'fs' on client
 
 export interface SiteData {
   name: string;
@@ -68,39 +67,7 @@ export const getData = (): OnepageData => {
 // Specific data getters
 export const getSiteData = (): SiteData => getData().site;
 export const getVideos = (): Video[] => getData().videos;
-export const getGallery = (): GalleryItem[] => {
-  const galleryDir = path.join(process.cwd(), 'public', 'media', 'gallery');
-  let files: string[] = [];
-  try {
-    files = fs.readdirSync(galleryDir);
-  } catch {
-    return [];
-  }
-
-  const imageExtensions = new Set(['.jpg', '.jpeg', '.png', '.webp', '.gif']);
-  const videoExtensions = new Set(['.mp4', '.webm', '.mov']);
-
-  const items: GalleryItem[] = files
-    .filter((filename) => {
-      const ext = path.extname(filename).toLowerCase();
-      return imageExtensions.has(ext) || videoExtensions.has(ext);
-    })
-    .map((filename) => {
-      const ext = path.extname(filename).toLowerCase();
-      const type: 'image' | 'video' = imageExtensions.has(ext) ? 'image' : 'video';
-      const base = path.basename(filename, ext);
-      return {
-        id: base,
-        type,
-        src: `/media/gallery/${filename}`,
-        thumbnail: undefined,
-        alt: base,
-        year: '',
-      } as GalleryItem;
-    });
-
-  return items;
-};
+// Note: getGallery is server-only in '@/lib/gallery' and must be imported directly from there in server components.
 export const getLegal = (): Legal => getData().legal;
 
 // Helper functions
@@ -108,15 +75,4 @@ export const getVideoById = (id: string): Video | undefined => {
   return getVideos().find(video => video.id === id);
 };
 
-export const getGalleryItemById = (id: string): GalleryItem | undefined => {
-  return getGallery().find(item => item.id === id);
-};
-
-// Filtering helpers
-export const filterGalleryByYear = (year: string): GalleryItem[] => {
-  return getGallery().filter(item => item.year === year);
-};
-
-export const filterGalleryByType = (type: 'image' | 'video'): GalleryItem[] => {
-  return getGallery().filter(item => item.type === type);
-};
+// Gallery helpers removed. Import from '@/lib/gallery' in server components if needed.

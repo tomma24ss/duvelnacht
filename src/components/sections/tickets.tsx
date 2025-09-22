@@ -11,7 +11,7 @@ export function MinimalTickets() {
         <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-glow">
           Tickets
         </h2>
-        <p className="text-off-white/70 mb-8">Beperkte capaciteit. Zeker je plek.</p>
+        <p className="text-off-white/70 mb-8">Beperkte capaciteit. Reserveer je plek.</p>
         <a href={site.ticketURL} target="_blank" rel="noopener noreferrer">
           <Button className="btn-ember text-lg px-10 py-5 font-semibold">
             Koop Tickets
