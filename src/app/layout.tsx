@@ -16,15 +16,18 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "DUVELNACHT - Waar goede bieren slecht gezelschap vinden",
+  title: "DUVELNACHT",
   description: "Eén nacht. Veel bieren. Onheilige beats. Berlijns meest duivelse nachtelijke viering van geluid en sterke ales.",
   keywords: ["duvelnacht", "berlijn", "techno", "speciaalbier", "nachtleven", "elektronische muziek", "dark techno", "industrial"],
   authors: [{ name: "Duvelnacht" }],
   creator: "Duvelnacht",
   publisher: "Duvelnacht",
   metadataBase: new URL("https://duvelnacht.com"),
+  icons: {
+    icon: "/media/gallery/profiel.jpg",
+  },
   openGraph: {
-    title: "DUVELNACHT - Waar goede bieren slecht gezelschap vinden",
+    title: "DUVELNACHT",
     description: "Eén nacht. Veel bieren. Onheilige beats. Sluit je aan bij Berlijns duivelse nachtelijke viering.",
     url: "https://duvelnacht.com",
     siteName: "Duvelnacht",
@@ -41,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DUVELNACHT - Waar goede bieren slecht gezelschap vinden",
+    title: "DUVELNACHT",
     description: "Eén nacht. Veel bieren. Onheilige beats. Berlijns duivelse nachtelijke viering.",
     images: ["/media/gallery/duvelnachtfoto.jpg"],
     creator: "@duvelnacht",
