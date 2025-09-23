@@ -25,7 +25,16 @@ export const metadata: Metadata = {
   publisher: "Duvelnacht",
   metadataBase: new URL("https://www.duvelnacht.be"),
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      "/favicon.ico",
+      { url: "/media/gallery/profiel.jpg", type: "image/jpeg" },
+    ],
+    shortcut: [
+      "/media/gallery/profiel.jpg",
+    ],
+    apple: [
+      "/media/gallery/profiel.jpg",
+    ],
   },
   openGraph: {
     title: "DUVELNACHT",
