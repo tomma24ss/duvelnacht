@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { getSiteData } from '@/lib/data';
 import { cn } from '@/lib/utils';
 import NextImage from 'next/image';
+import { withCdn } from '@/lib/cdn';
 
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -12,7 +13,7 @@ export function HeroSection() {
 
   useEffect(() => {
     const img = new window.Image();
-    img.src = siteData.heroPoster;
+    img.src = withCdn(siteData.heroPoster);
     img.onload = () => setIsLoaded(true);
   }, [siteData.heroPoster]);
 
@@ -43,14 +44,21 @@ export function HeroSection() {
           />
         </div>
       </div>
-      {/* Static Background Image */}
-      <div 
-        className={cn(
-          "absolute inset-0 z-0 bg-cover bg-center transition-opacity duration-700",
-          isLoaded ? "opacity-100" : "opacity-0"
-        )}
-        style={{ backgroundImage: `url(${siteData.heroPoster})` }}
-      />
+      {/* Optimized Background Image */}
+      <div className="absolute inset-0 z-0">
+        <NextImage
+          src={withCdn(siteData.heroPoster)}
+          alt="Hero background"
+          fill
+          priority
+          sizes="100vw"
+          className={cn(
+            "object-cover object-center transition-opacity duration-700",
+            isLoaded ? "opacity-100" : "opacity-0"
+          )}
+          onLoadingComplete={() => setIsLoaded(true)}
+        />
+      </div>
       <div className="absolute inset-0 hero-overlay" />
 
       {/* Centered Headline Layer */}

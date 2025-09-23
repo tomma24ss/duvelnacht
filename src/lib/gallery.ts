@@ -2,6 +2,7 @@ import 'server-only'
 import fs from 'fs'
 import path from 'path'
 import type { GalleryItem } from '@/lib/data'
+import { withCdn } from '@/lib/cdn'
 
 export const getGallery = (): GalleryItem[] => {
   const galleryDir = path.join(process.cwd(), 'public', 'media', 'gallery')
@@ -27,7 +28,7 @@ export const getGallery = (): GalleryItem[] => {
       return {
         id: base,
         type,
-        src: `/media/gallery/${filename}`,
+        src: withCdn(`/media/gallery/${filename}`),
         thumbnail: undefined,
         alt: base,
         year: '',
@@ -56,7 +57,7 @@ export const getSponsorImages = (): GalleryItem[] => {
       return {
         id: base,
         type: 'image',
-        src: `/media/sponsors/${filename}`,
+        src: withCdn(`/media/sponsors/${filename}`),
         thumbnail: undefined,
         alt: base,
         year: '',

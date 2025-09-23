@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { withCdn } from '@/lib/cdn';
 
 const sponsors = [
   {
@@ -94,7 +95,7 @@ export function SponsorsSection() {
                 >
                   <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 h-32 flex items-center justify-center hover:bg-white/10 transition-all duration-300">
                     <Image
-                      src={sponsor.logo}
+                      src={withCdn(sponsor.logo)}
                       alt={sponsor.name}
                       width={160}
                       height={80}
@@ -121,7 +122,7 @@ export function SponsorsSection() {
                 >
                   <div className="bg-white/3 backdrop-blur-sm rounded-lg p-6 h-20 flex items-center justify-center hover:bg-white/5 transition-all duration-300">
                     <Image
-                      src={sponsor.logo}
+                      src={withCdn(sponsor.logo)}
                       alt={sponsor.name}
                       width={120}
                       height={60}

@@ -197,9 +197,12 @@ export function Lightbox({
                 <Image
                   src={currentItem.src}
                   alt={currentItem.alt || ''}
-                  width={1200}
-                  height={800}
+                  width={1600}
+                  height={900}
+                  sizes="(min-width: 1024px) 80vw, 100vw"
                   className="max-w-full max-h-[80vh] object-contain"
+                  loading={currentIndex === initialIndex ? 'eager' : 'lazy'}
+                  decoding="async"
                 />
               ) : (
                 <div className="relative">
@@ -212,6 +215,7 @@ export function Lightbox({
                     onPlay={() => setIsPlaying(true)}
                     onPause={() => setIsPlaying(false)}
                     controls={false}
+                    preload="metadata"
                   />
                   
                   {/* Video controls overlay */}
@@ -294,6 +298,8 @@ export function Lightbox({
                       width={48}
                       height={32}
                       className="w-full h-full object-cover"
+                      loading={index === currentIndex ? 'eager' : 'lazy'}
+                      decoding="async"
                     />
                   ) : (
                     <div className="w-full h-full bg-gray-700 flex items-center justify-center">

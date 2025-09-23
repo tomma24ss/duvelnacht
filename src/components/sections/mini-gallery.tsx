@@ -25,13 +25,17 @@ export function MiniGallery() {
                     preload="metadata"
                   />
                 ) : (
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={2000}
-                    height={2000}
-                    className="w-full h-auto object-contain align-top block"
-                  />
+                  <div className="relative w-full">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(min-width: 768px) 25vw, 50vw"
+                      className="object-cover align-top block"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
                 )}
               </div>
             );

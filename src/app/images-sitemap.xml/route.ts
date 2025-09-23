@@ -9,7 +9,7 @@ export async function GET() {
   const images = [...getGallery(), ...getSponsorImages()];
 
   const urlsetItems = images.map((item) => {
-    const loc = `${BASE_URL}${item.src}`;
+    const loc = /^https?:\/\//i.test(item.src) ? item.src : `${BASE_URL}${item.src}`;
     const title = item.alt || item.id;
     return `\n  <url>\n    <loc>${BASE_URL}/</loc>\n    <image:image>\n      <image:loc>${loc}</image:loc>\n      <image:title>${escapeXml(title)}</image:title>\n    </image:image>\n  </url>`;
   }).join("");

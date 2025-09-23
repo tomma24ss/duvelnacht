@@ -1,0 +1,8 @@
+/media/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Optional: also cache the Next.js image optimization endpoint responses
+/_next/image*
+  Cache-Control: public, max-age=31536000, immutable
+
+
