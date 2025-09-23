@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.duvelnacht.be/sitemap.xml
+Sitemap: https://www.duvelnacht.be/images-sitemap.xml
+Host: https://www.duvelnacht.be
+
+
