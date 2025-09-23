@@ -3,7 +3,7 @@ import { getGallery, getSponsorImages } from "@/lib/gallery";
 
 const BASE_URL = "https://www.duvelnacht.be" as const;
 
-export const revalidate = 60 * 60 * 24; // 24h
+export const revalidate = 86400; // 24h
 
 export async function GET() {
   const images = [...getGallery(), ...getSponsorImages()];
