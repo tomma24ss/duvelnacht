@@ -23,14 +23,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Duvelnacht" }],
   creator: "Duvelnacht",
   publisher: "Duvelnacht",
-  metadataBase: new URL("https://duvelnacht.com"),
+  metadataBase: new URL("https://www.duvelnacht.be"),
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
     title: "DUVELNACHT",
     description: "Eén nacht. Veel bieren. Onheilige beats. Sluit je aan bij Berlijns duivelse nachtelijke viering.",
-    url: "https://duvelnacht.com",
+    url: "https://www.duvelnacht.be",
     siteName: "Duvelnacht",
     images: [
       {
