@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.duvelnacht.be"),
   icons: {
     icon: [
-      "/favicon.ico",
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/media/gallery/profiel.jpg", type: "image/jpeg" },
     ],
     shortcut: [
-      "/media/gallery/profiel.jpg",
+      "/favicon.ico",
     ],
     apple: [
-      "/media/gallery/profiel.jpg",
+      { url: "/media/gallery/profiel.jpg", sizes: "180x180" },
     ],
   },
   openGraph: {
