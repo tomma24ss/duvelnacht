@@ -18,7 +18,7 @@ const cinzel = Cinzel({
 
 export const metadata: Metadata = {
   title: "DUVELNACHT",
-  description: "Duvelnacht: de fuif van Chiro Balegem in Den Amb8. Een van Oosterzele's beste nachten met stevige beats, topsfeer en frisse bieren.",
+  description: "Duvelnacht: de legendarische fuif van Chiro Balegem in Den Amb8 (Oosterzele). Harde beats, dikke sfeer en frisse bieren.",
   keywords: ["duvelnacht", "chiro balegem", "oosterzele", "den amb8", "fuif", "party", "techno", "speciaalbier", "nachtleven", "elektronische muziek"],
   authors: [{ name: "Duvelnacht" }],
   creator: "Duvelnacht",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "DUVELNACHT",
-    description: "Duvelnacht: de fuif van Chiro Balegem in Den Amb8. Een van Oosterzele's beste nachten met stevige beats, topsfeer en frisse bieren.",
+    description: "Duvelnacht: de legendarische fuif van Chiro Balegem in Den Amb8 (Oosterzele). Harde beats, dikke sfeer en frisse bieren.",
     url: "https://www.duvelnacht.be",
     siteName: "Duvelnacht",
     images: [
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "DUVELNACHT",
-    description: "Duvelnacht: de fuif van Chiro Balegem in Den Amb8. Een van Oosterzele's beste nachten met stevige beats, topsfeer en frisse bieren.",
+    description: "Duvelnacht: de legendarische fuif van Chiro Balegem in Den Amb8 (Oosterzele). Harde beats, dikke sfeer en frisse bieren.",
     images: ["/media/gallery/duvelnachtfoto.jpg"],
     creator: "@duvelnacht",
   },
