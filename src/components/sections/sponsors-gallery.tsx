@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 export function SponsorsGallery() {
   const items = getSponsorImages();
+  const shuffledItems = [...items].sort(() => Math.random() - 0.5);
   if (items.length === 0) return null;
 
   return (
@@ -13,7 +14,7 @@ export function SponsorsGallery() {
         </h2>
         <p className="text-center text-off-white/70 mb-6">Bedankt aan onze partners</p>
         <div className="columns-2 md:columns-4 [column-gap:0] [column-fill:_balance]">
-          {items.map((item) => (
+          {shuffledItems.map((item) => (
             <div key={item.id} className="break-inside-avoid mb-0 p-4 flex items-center justify-center bg-white/5">
               <div className="relative w-full h-40">
                 <Image

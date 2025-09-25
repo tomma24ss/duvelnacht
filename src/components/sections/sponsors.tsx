@@ -60,8 +60,8 @@ const itemVariants = {
 };
 
 export function SponsorsSection() {
-  const mainSponsors = sponsors.filter(s => s.tier === 'main');
-  const supportingSponsors = sponsors.filter(s => s.tier === 'supporting');
+  const mainSponsors = [...sponsors.filter(s => s.tier === 'main')].sort(() => Math.random() - 0.5);
+  const supportingSponsors = [...sponsors.filter(s => s.tier === 'supporting')].sort(() => Math.random() - 0.5);
 
   return (
     <section id="sponsors" className="py-16 md:py-20 relative">
