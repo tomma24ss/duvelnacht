@@ -1,8 +1,9 @@
+**Website:** [www.duvelnacht.be](http://www.duvelnacht.be)
+
 # DUVELNACHT
 
-> Where good beers meet bad influence.
 
-A premium, dark-themed one-page website for Duvelnacht - Berlin's devilish nocturnal celebration of electronic music and craft beer. Built with Next.js, TypeScript, Tailwind CSS, and fully containerized with Docker.
+A premium, dark-themed one-page website for Duvelnacht - Berlin's devilish nocturnal celebration of electronic music and craft beer. Built with Next.js, TypeScript, Tailwind CSS, and fully containerized with Docker. 
 
 ## 🔥 Features
 
