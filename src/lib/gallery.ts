@@ -35,7 +35,7 @@ export const getGallery = (): GalleryItem[] => {
       } as GalleryItem
     })
 
-  return items
+  return items.sort((a, b) => a.id.localeCompare(b.id))
 }
 
 export const getSponsorImages = (): GalleryItem[] => {
@@ -64,7 +64,7 @@ export const getSponsorImages = (): GalleryItem[] => {
       } as GalleryItem
     })
 
-  return items
+  return items.sort((a, b) => a.id.localeCompare(b.id))
 }
 
 

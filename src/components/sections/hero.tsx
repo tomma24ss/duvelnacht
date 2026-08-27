@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { getSiteData } from '@/lib/data';
 import { cn } from '@/lib/utils';
@@ -10,12 +10,6 @@ import { withCdn } from '@/lib/cdn';
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
   const siteData = getSiteData();
-
-  useEffect(() => {
-    const img = new window.Image();
-    img.src = withCdn(siteData.heroPoster);
-    img.onload = () => setIsLoaded(true);
-  }, [siteData.heroPoster]);
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -40,7 +34,7 @@ export function HeroSection() {
             style={{
               filter: 'drop-shadow(0 0 1px rgba(255,255,255,0.6)) drop-shadow(0 0 8px rgba(255,0,0,0.5)) drop-shadow(0 0 16px rgba(255,0,0,0.35))'
             }}
-            loading="lazy"
+            loading="eager"
           />
         </div>
       </div>
@@ -100,25 +94,27 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator (pinned to bottom of hero) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 2 }}
-        className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 z-30"
-      >
+      <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center">
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 2 }}
+          className="flex flex-col items-center"
         >
           <motion.div
-            animate={{ y: [0, 12, 0] }}
+            animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1 h-3 bg-white/50 rounded-full mt-2"
-          />
+            className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+          >
+            <motion.div
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="w-1 h-3 bg-white/50 rounded-full mt-2"
+            />
+          </motion.div>
+          <p className="text-xs text-white/40 mt-2 tracking-wider text-center">SCROLL</p>
         </motion.div>
-        <p className="text-xs text-white/40 mt-2 tracking-wider">SCROLL</p>
-      </motion.div>
+      </div>
 
       {/* Floating Particles */}
       <div className="absolute inset-0 z-5 pointer-events-none">

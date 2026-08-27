@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Cinzel } from "next/font/google";
 import "./globals.css";
-import { getSiteData } from "@/lib/data";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Duvelnacht" }],
   creator: "Duvelnacht",
   publisher: "Duvelnacht",
-  metadataBase: new URL("https://www.duvelnacht.be"),
+  metadataBase: new URL("https://duvelnacht.be"),
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DUVELNACHT",
     description: "Duvelnacht: de legendarische fuif van Chiro Balegem in Den Amb8 (Oosterzele). Harde beats, dikke sfeer en frisse bieren.",
-    url: "https://www.duvelnacht.be",
+    url: "https://duvelnacht.be",
     siteName: "Duvelnacht",
     images: [
       {
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
         alt: "Duvelnacht - Where good beers meet bad influence",
       },
     ],
-    locale: "en_US",
+    locale: "nl_BE",
     type: "website",
   },
   twitter: {
@@ -70,9 +69,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
 };
 
 export default function RootLayout({
@@ -80,15 +76,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const siteData = getSiteData();
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Preload hero background image so it renders first */}
-        <link rel="preload" as="image" href={siteData.heroPoster} fetchPriority="high" />
-      </head>
+    <html lang="nl" className="dark scroll-smooth">
       <body
         className={`${inter.variable} ${cinzel.variable} bg-grain min-h-screen antialiased`}
       >

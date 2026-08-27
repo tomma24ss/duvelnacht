@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 // Note: We hardcode the production base URL to ensure absolute URLs in the sitemap.
 // If you deploy to multiple environments, consider reading from ENV and defaulting to production.
-const BASE_URL = "https://www.duvelnacht.be" as const;
+const BASE_URL = "https://duvelnacht.be" as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();

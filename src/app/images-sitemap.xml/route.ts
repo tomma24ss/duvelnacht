@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getGallery, getSponsorImages } from "@/lib/gallery";
 
-const BASE_URL = "https://www.duvelnacht.be" as const;
+const BASE_URL = "https://duvelnacht.be" as const;
 
 export const revalidate = 86400; // 24h
 

@@ -1,5 +1,3 @@
-'use client';
-
 import { getSiteData } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 

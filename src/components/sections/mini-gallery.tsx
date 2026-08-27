@@ -1,13 +1,15 @@
 import Image from 'next/image';
 import { getGallery } from '@/lib/gallery';
+import { seededShuffle } from '@/lib/utils';
+import { GalleryVideo } from '@/components/ui/gallery-video';
 
 export function MiniGallery() {
-  const shuffled = [...getGallery()].sort(() => Math.random() - 0.5);
+  const items = seededShuffle(getGallery(), 'duvelnacht-gallery');
   return (
     <section id="gallery" className="py-0 md:py-0">
       <div className="w-full">
         <div className="columns-2 md:columns-4 [column-gap:0] [column-fill:_balance]">
-          {shuffled.map((item) => {
+          {items.map((item) => {
             const isVideo = item.type === 'video';
             return (
               <div
@@ -15,15 +17,7 @@ export function MiniGallery() {
                 className="break-inside-avoid mb-0"
               >
                 {isVideo ? (
-                  <video
-                    src={item.src}
-                    className="w-full h-auto align-top block"
-                    muted
-                    playsInline
-                    autoPlay
-                    loop
-                    preload="metadata"
-                  />
+                  <GalleryVideo src={item.src} />
                 ) : (
                   <Image
                     src={item.src}
@@ -44,5 +38,3 @@ export function MiniGallery() {
     </section>
   );
 }
-
-
