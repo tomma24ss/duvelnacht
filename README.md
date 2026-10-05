@@ -4,7 +4,7 @@
 
 This is the repository for the [Duvelnacht](https://duvelnacht.be/) website. The site was created for Duvelnacht.
 
-Duvelnacht is the yearly party of [Jongenschiro Balegem](https://www.jongenschirobalegem.be/). It runs from 21:00 to 04:00 at Den Amb8, Lange Ambachtstraat 42, 9860 Oosterzele. Tickets are limited and sold through the Chiro Balegem WeTicket shop. The name plays on a duivel fuif, and Duvel is also sold at the party. The event is not sponsored by Duvel.
+Duvelnacht is the yearly party of [Jongenschiro Balegem](https://www.jongenschirobalegem.be/). It runs from 21:00 to 04:00 at Den Amb8, Lange Ambachtstraat 42, 9860 Oosterzele. Tickets are limited and sold through the Chiro Balegem WeTicket shop.
 
 The public page is a single dark screen: the event hero, a ticket block, a photo gallery, local sponsors, and links to [Instagram](https://www.instagram.com/duvelnacht_chirobalegem/) and [Facebook](https://www.facebook.com/duvelnacht).
 
