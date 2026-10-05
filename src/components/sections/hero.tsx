@@ -55,18 +55,22 @@ export function HeroSection() {
       </div>
       <div className="absolute inset-0 hero-overlay" />
 
-      {/* Centered Headline Layer */}
-      <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none px-4">
+      {/* Affiche wordmark */}
+      <div className="absolute inset-0 z-20 flex items-end justify-center pointer-events-none px-4 pb-[52vh]">
         <motion.h1
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-display font-extrabold text-center text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-wide md:tracking-widest leading-tight text-off-white animate-pulse-glow max-w-[92vw] break-words"
-          style={{
-            textShadow: '0 0 30px rgba(200, 67, 42, 0.8), 0 0 60px rgba(200, 67, 42, 0.6), 0 0 90px rgba(200, 67, 42, 0.4), 0 0 120px rgba(200, 67, 42, 0.2)'
-          }}
+          className="w-full max-w-3xl"
         >
-          {siteData.name}
+          <NextImage
+            src="/media/duvelnacht-letters.png"
+            alt="Chiro Balegem presents Duvelnacht"
+            width={685}
+            height={186}
+            priority
+            className="w-full h-auto drop-shadow-[0_8px_24px_rgba(0,0,0,0.8)]"
+          />
         </motion.h1>
       </div>
 
